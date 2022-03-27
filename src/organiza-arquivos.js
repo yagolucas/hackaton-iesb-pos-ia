@@ -13,7 +13,7 @@ const createFolderForFile = (file) => {
 
 const createSingleFile = (file) => {
   const homePath = root + "/../data/" + getExerciseType(file);
-  fs.appendFile(
+  fs.writeFile(
     `${homePath}/${replaceDots(file.startTime)}.json`,
     JSON.stringify(file, null, 2),
     (err) => {
@@ -45,7 +45,6 @@ const readSingleFile = (filePath, filename) => {
 
 const readDir = () => {
   const pathToRead = __dirname + "/../dataset/";
-  console.log(pathToRead);
   fs.readdir(pathToRead, (err, filenames) => {
     if (err) {
       console.error(err);
