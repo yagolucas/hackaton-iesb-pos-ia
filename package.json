@@ -1,0 +1,19 @@
+{
+  "name": "hackaton-iesb-pos-ia",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para o hackaton de Inteliência Artificial de pós graduação do iesb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagolucas/hackaton-iesb-pos-ia.git"
+  },
+  "author": "Yago Lucas de Souza Freitas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yagolucas/hackaton-iesb-pos-ia/issues"
+  },
+  "homepage": "https://github.com/yagolucas/hackaton-iesb-pos-ia#readme"
+}
