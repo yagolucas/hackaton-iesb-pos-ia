@@ -4,23 +4,6 @@ const root = path.dirname(require.main.filename);
 const util = require("util");
 const asyncs = require("async");
 
-const readSingleFile = async (filePath, filename, obb) => {
-  let obj;
-  await fs.readFile(filePath + filename, "utf-8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    try {
-      obj = JSON.parse(data);
-      console.log(obj, "read fil");
-      obb[filename] = obj;
-    } catch (e) {
-      console.error(e);
-    }
-  });
-};
-
 const readDir = () => {
   const pathToRead = root + "/../data/";
   fs.readdir(pathToRead, (err, filenames) => {
