@@ -32,6 +32,16 @@ const exec = async (colection) => {
           );
           const obj = JSON.parse(raw);
           const utilData = obj.exercises[0].samples;
+          if (
+            !(
+              utilData.speed &&
+              utilData.recordedRoute &&
+              utilData.distance &&
+              utilData.cadence
+            )
+          ) {
+            return;
+          }
           const filtered = {
             rota: utilData.recordedRoute,
             distancia: utilData.distance,
@@ -63,4 +73,4 @@ const exec = async (colection) => {
   }
 };
 
-exec('RUNNING');
+exec("RUNNING");
