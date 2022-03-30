@@ -1,5 +1,5 @@
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://root:example@localhost:27017/";
+const url = "mongodb://root:example@localhost:27017/"; // apenas para uso de classe
 const fs = require("fs");
 const path = require("path");
 const root = path.dirname(require.main.filename);
@@ -24,7 +24,6 @@ const createCollections = async () => {
         () => client.close()
       );
     });
-    // await client.db("admin").createCollection("hackaton");
   } catch (e) {
     console.log("não conectou!");
     console.log(e.message);
@@ -32,6 +31,4 @@ const createCollections = async () => {
   }
 };
 
-// listAvaliableCollections();
-// listAvaliableCollections2();
 createCollections();
