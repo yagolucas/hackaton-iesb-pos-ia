@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "create-collections": "node ./src/query/create-collection.js",
-    "insert-into-running": "node ./src/query/add-running-data.js"
+    "insert-into-running": "node ./src/query/add-running-data.js",
+    "organize-files": "node ./src/organiza-arquivos.js"
   },
   "repository": {
     "type": "git",
