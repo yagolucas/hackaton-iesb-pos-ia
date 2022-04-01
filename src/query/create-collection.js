@@ -1,5 +1,6 @@
+require('dotenv').config();
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://root:example@localhost:27017/"; // apenas para uso de classe
+const url = `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWD}@localhost:27017/`;
 const fs = require("fs");
 const path = require("path");
 const root = path.dirname(require.main.filename);
